@@ -3,12 +3,24 @@
 <head>
   <title>RandomOnRails</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="../" class="navbar-brand">Random on Rails</a>
+    </div>
+    <p class="navbar-text">Performance testing methods of getting multiple random records.</p>
+  </div>
+</header>
+
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>

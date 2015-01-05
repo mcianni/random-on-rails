@@ -6,9 +6,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    ids = Rails.cache.fetch :people_ids do
-      Person.pluck(:id)
-    end
-    @record_index_size = ObjectSpace.memsize_of(ids)
+    #@record_index_size = ObjectSpace.memsize_of(ids)
+    @records1 = Person.random_by_database(n: 4)
+    @records2 = Person.random_by_id_cache(n: 4)
   end
 end

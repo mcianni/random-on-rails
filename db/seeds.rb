@@ -3,11 +3,12 @@
 
 data = []
 time = Time.now
+TIMES = 10000
 conn = ActiveRecord::Base.connection
 
 Person.delete_all
 
-500000.times do 
+TIMES.times do 
   data << "('#{time}', '#{time}')"
 end
 
