@@ -1,7 +1,18 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+data = []
+time = Time.now
+conn = ActiveRecord::Base.connection
+
+Person.delete_all
+
+500000.times do 
+  data << "('#{time}', '#{time}')"
+end
+
+sql = "INSERT INTO people(created_at, updated_at) VALUES #{data.join(', ')}"
+
+4.times do
+  conn.execute sql
+end
