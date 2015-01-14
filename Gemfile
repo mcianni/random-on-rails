@@ -28,7 +28,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 gem 'unicorn'
-gem 'ruby-prof'
 gem 'faker'
 
 # Use Capistrano for deployment
@@ -45,3 +44,7 @@ group :development, :test do
   gem 'spring'
 end
 
+group :test do
+  gem 'rails-perftest'
+  gem 'ruby-prof'
+end

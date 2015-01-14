@@ -2,11 +2,26 @@
 <div class="panel panel-default">
   <div class="panel-heading">Records 1</div>
   <div class="panel-body">
+    <% @records1.each do |record| -%>
+      <div><%= record.inspect %></div>
+    <% end -%>
   </div>
 </div>
 
 <div class="panel panel-default">
   <div class="panel-heading">Records 2</div>
   <div class="panel-body">
+    <% @records2.each do |record| -%>
+      <div><%= record.inspect %></div>
+    <% end -%>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Records 3</div>
+  <div class="panel-body">
+    <% @records3.each do |record| -%>
+      <div><%= record.inspect %></div>
+    <% end -%>
   </div>
 </div>

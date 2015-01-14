@@ -3,7 +3,7 @@
 
 data = []
 time = Time.now
-TIMES = 10000
+TIMES = 1000000
 conn = ActiveRecord::Base.connection
 
 Person.delete_all
