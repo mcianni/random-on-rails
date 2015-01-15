@@ -1,6 +1,7 @@
 *.rbc
 *.swp
 *.DS_STORE
+dump.rdb
 capybara-*.html
 .rspec
 /log
